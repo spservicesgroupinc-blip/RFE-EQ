@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RFE - Foam Equipment, Training, and Service</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:ital,wght@0,800;0,900;1,800;1,900&family=Saira:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              rfe: {
+                red: '#E60012',
+                'red-dark': '#8a000d',
+                yellow: '#FFED00',
+                black: '#0a0a0a',
+                gray: '#121212',
+                lightGray: '#1e1e1e',
+                body: '#050505',
+              }
+            },
+            fontFamily: {
+              display: ['Montserrat', 'sans-serif'],
+              body: ['Inter', 'sans-serif'],
+              logo: ['Saira', 'sans-serif'],
+            },
+            boxShadow: {
+              'hard': '4px 4px 0px 0px rgba(255, 255, 255, 0.2)',
+              'hard-red': '4px 4px 0px 0px #E60012',
+              'hard-yellow': '4px 4px 0px 0px #FFED00',
+              'glow-red': '0 0 20px rgba(230, 0, 18, 0.5)',
+            },
+            skew: {
+              '12': '12deg',
+              '-12': '-12deg',
+            },
+            backgroundImage: {
+              'industrial-pattern': "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')",
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #121212;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #E60012;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #FFED00;
+      }
+      
+      .clip-hero {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+      }
+      
+      .skew-fix-child > * {
+        transform: skewX(12deg);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-rfe-body text-white font-body selection:bg-rfe-red selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
